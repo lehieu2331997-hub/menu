@@ -2,194 +2,199 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Restaurant Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #000;
+}
+
+.header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* LANGUAGE */
+.lang button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+.lang button.active {
+  background: #ffd166;
+  color: #000;
+}
+
+/* MENU GRID */
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* ITEM */
+.item {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  padding: 12px;
+}
+
+.price {
+  color: #ffd166;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* CONTACT UNDER ITEM */
+.item-contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-top: 1px solid #333;
+  background: #000;
+}
+
+.item-contact a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+}
+
+.item-contact span {
+  display: block;
+  font-size: 18px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
 </head>
 
-<body style="
-margin:0;
-background:#0f0f0f;
-color:white;
-font-family:Arial;
-padding:20px">
+<body>
 
-<!-- TIÊU ĐỀ -->
-<h1 style="text-align:center;font-size:42px;margin-bottom:10px">
-LẠC THI MENU
-</h1>
+<!-- HEADER -->
+<div class="header">
+  <h1 class="vi">MENU QUÁN</h1>
+  <h1 class="en" style="display:none">RESTAURANT LẠC MENU</h1>
 
-<!-- THÔNG TIN QUÁN -->
-<div style="text-align:center;color:#ccc;margin-bottom:40px">
-<p>
-📍 Địa chỉ: 05 trấn yên, phường yên bái<br>
-📞 Phone: <a href="tel:0364987155" style="color:gold;text-decoration:none">0364987155</a>
-</p>
-<p style="font-style:italic">
-Open daily | Mở cửa hằng ngày
-</p>
+  <div class="lang">
+    <button id="btn-vi" class="active" onclick="setLang('vi')">VI</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
 </div>
 
-<!-- DANH SÁCH MÓN -->
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px">
+<!-- MENU -->
+<div class="menu">
 
-<!-- MÓN 1 -->
-<div style="
-background:#1e1e1e;
-border-radius:20px;
-padding:20px">
+  <!-- ITEM 1 -->
+  <div class="item">
+    <img src="pho.jpg">
+    <div class="info">
+      <div class="vi">
+        <h3>Phở Bò</h3>
+        <p>Nước dùng hầm xương 12 giờ</p>
+      </div>
+      <div class="en" style="display:none">
+        <h3>Beef Noodle Soup</h3>
+        <p>12-hour simmered beef broth</p>
+      </div>
+      <div class="price">50.000đ</div>
+    </div>
 
-<img src="pho.jpg" style="
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:15px">
+    <div class="item-contact">
+      <a href="tel:0364987155">
+        <span>📞</span>
+        <div class="vi">Gọi</div>
+        <div class="en" style="display:none">Call</div>
+      </a>
+      <a href="https://zalo.me/0364987155" target="_blank">
+        <span>💬</span>
+        <div>Zalo</div>
+      </a>
+      <a href="https://wa.me/84364987155" target="_blank">
+        <span>🟢</span>
+        <div>WhatsApp</div>
+      </a>
+    </div>
+  </div>
 
-<h2 style="margin-top:15px">
-PHỞ BÒ<br>
-<span style="font-size:16px;color:#aaa">
-Beef Noodle Soup
-</span>
-</h2>
+  <!-- ITEM 2 -->
+  <div class="item">
+    <img src="bunbo.jpg">
+    <div class="info">
+      <div class="vi">
+        <h3>Bún Bò Huế</h3>
+        <p>Cay nhẹ, đậm vị Huế</p>
+      </div>
+      <div class="en" style="display:none">
+        <h3>Hue Spicy Beef Noodles</h3>
+        <p>Traditional spicy noodle soup</p>
+      </div>
+      <div class="price">55.000đ</div>
+    </div>
 
-<p style="color:#ccc">
-Nước dùng hầm xương 12 giờ, thịt bò tươi<br>
-<span style="font-size:14px;color:#888">
-12-hour simmered beef broth
-</span>
-</p>
-
-<p style="color:gold;font-size:18px">★★★★★</p>
-
-<p style="font-size:22px;font-weight:bold">
-60.000đ
-</p>
-
-<a href="tel:0364987155" style="
-display:block;
-margin-top:10px;
-padding:12px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-text-align:center">
-📞 ĐẶT MÓN
-</a>
-
-</div>
-
-<!-- MÓN 2 -->
-<div style="
-background:#1e1e1e;
-border-radius:20px;
-padding:20px">
-
-<img src="banhmi.jpg" style="
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:15px">
-
-<h2>
-BÁNH MÌ<br>
-<span style="font-size:16px;color:#aaa">
-Vietnamese Baguette
-</span>
-</h2>
-
-<p style="color:#ccc">
-Bánh mì giòn, pate nhà làm<br>
-<span style="font-size:14px;color:#888">
-Crispy baguette, homemade pâté
-</span>
-</p>
-
-<p style="color:gold;font-size:18px">★★★★☆</p>
-
-<p style="font-size:22px;font-weight:bold">
-30.000đ
-</p>
-
-<a href="https://zalo.me/0364987155" style="
-display:block;
-margin-top:10px;
-padding:12px;
-background:#00aaff;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-text-align:center">
-💬 ĐẶT MÓN QUA ZALO
-</a>
+    <div class="item-contact">
+      <a href="tel:0364987155">
+        <span>📞</span>
+        <div class="vi">Gọi</div>
+        <div class="en" style="display:none">Call</div>
+      </a>
+      <a href="https://zalo.me/0364987155" target="_blank">
+        <span>💬</span>
+        <div>Zalo</div>
+      </a>
+      <a href="https://wa.me/84364987155" target="_blank">
+        <span>🟢</span>
+        <div>WhatsApp</div>
+      </a>
+    </div>
+  </div>
 
 </div>
 
-<!-- MÓN 3 -->
-<div style="
-background:#1e1e1e;
-border-radius:20px;
-padding:20px">
+<!-- SCRIPT -->
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.vi').forEach(el => el.style.display = lang === 'vi' ? '' : 'none');
+  document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
 
-<img src="bunbo.jpg" style="
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:15px">
-
-<h2>
-BÚN BÒ HUẾ<br>
-<span style="font-size:16px;color:#aaa">
-Hue Spicy Noodle Soup
-</span>
-</h2>
-
-<p style="color:#ccc">
-Đậm vị Huế, cay nhẹ<br>
-<span style="font-size:14px;color:#888">
-Spicy beef noodle soup from Hue
-</span>
-</p>
-
-<p style="color:gold;font-size:18px">★★★★★</p>
-
-<p style="font-size:22px;font-weight:bold">
-55.000đ
-</p>
-
-<a href="tel:036498155" style="
-display:block;
-margin-top:10px;
-padding:12px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-text-align:center">
-📞 ORDER NOW
-</a>
-
-</div>
-
-</div>
-
-<!-- NÚT ĐẶT MÓN NỔI -->
-<div style="position:fixed;bottom:20px;right:20px">
-<a href="tel:0901234567" style="
-background:red;
-color:white;
-padding:15px 22px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold">
-📞 ORDER
-</a>
-</div>
+  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+</script>
 
 </body>
 </html>
-
