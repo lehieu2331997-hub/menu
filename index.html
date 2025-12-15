@@ -1,175 +1,179 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu Nhà Hàng</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Nhà Hàng</title>
 
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN42802090"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-MN42802090');
+  </script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MN42802090"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-MN42802090');
-</script>
+  <style>
+    * { box-sizing: border-box; }
 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
 
-<style>
-* { box-sizing: border-box; }
+    h1 { text-align: center; padding: 16px; }
 
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 16px;
+      width: 100%;
+    }
 
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #f9f9f9;
-min-height: 100vh;
-overflow-x: hidden;
-overflow-y: auto;
-}
+    .item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
 
+    .item-img {
+      aspect-ratio: 4 / 3;
+      position: relative;
+      overflow: hidden;
+    }
 
-h1 { text-align: center; padding: 16px; }
+    .item-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
+    .badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #e53935;
+      color: #fff;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
 
-.menu {
-display: grid;
-grid-template-columns: 1fr;
-gap: 16px;
-padding: 16px;
-width: 100%;
-}
+    .info {
+      padding: 12px;
+    }
 
+    .info h3 { margin: 0 0 4px; }
+    .info p { margin: 0 0 4px; font-size: 14px; }
 
-.item {
-background: #fff;
-border-radius: 12px;
-overflow: hidden;
-box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
+    .price {
+      font-weight: bold;
+      margin-top: 6px;
+      color: #2e7d32;
+    }
 
+    .item-contact {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid #eee;
+    }
 
-.item-img {
-aspect-ratio: 4 / 3;
-position: relative;
-overflow: hidden;
-}
+    .item-contact a {
+      flex: 1 1 30%;
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 6px;
+    }
 
+    .call { background: #1976d2; }
+    .zalo { background: #0288d1; }
+    .wa { background: #25d366; }
 
-.item-img img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-}
-
-
-.badge {
-position: absolute;
-top: 8px;
-left: 8px;
-background: #e53935;
-color: #fff;
-font-size: 12px;
-padding: 4px 8px;
-border-radius: 6px;
-}
-
-
-.info {
-padding: 12px;
-}
-
-
-.info h3 { margin: 0 0 4px; }
-.info p { margin: 0 0 4px; font-size: 14px; }
-
-
-.price {
-font-weight: bold;
-margin-top: 6px;
-color: #2e7d32;
+    @media (min-width: 768px) {
+      .menu {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
 <body>
-
 
 <h1>MENU / FOOD MENU</h1>
 
-
 <div class="menu">
 
+  <!-- MÓN 1 -->
+  <div class="item">
+    <div class="item-img">
+      <span class="badge">Best Seller</span>
+      <img src="phobo.jpg" loading="lazy" decoding="async">
+    </div>
+    <div class="info">
+      <h3>Phở Bò</h3>
+      <p>Beef Noodle Soup</p>
+      <div class="price">50.000đ</div>
+    </div>
+    <div class="item-contact">
+      <a class="call" href="tel:0900000000">Gọi</a>
+      <a class="zalo" href="https://zalo.me/0900000000">Zalo</a>
+      <a class="wa" href="https://wa.me/84900000000">WhatsApp</a>
+    </div>
+  </div>
 
-<!-- MÓN 1 -->
-<div class="item">
-<div class="item-img">
-<span class="badge">Best Seller</span>
-<img src="phobo.jpg" loading="lazy" decoding="async">
-</div>
-<div class="info">
-<h3>Phở Bò</h3>
-<p>Beef Noodle Soup</p>
-<div class="price">50.000đ</div>
-</div>
-<div class="item-contact">
-<a class="call" href="tel:0900000000">Gọi</a>
-<a class="zalo" href="https://zalo.me/0900000000">Zalo</a>
-<a class="wa" href="https://wa.me/84900000000">WhatsApp</a>
-</div>
-</div>
+  <!-- MÓN 2 -->
+  <div class="item">
+    <div class="item-img"><img src="buncha.jpg" loading="lazy"></div>
+    <div class="info">
+      <h3>Bún Chả</h3>
+      <p>Grilled Pork with Noodles</p>
+      <div class="price">55.000đ</div>
+    </div>
+    <div class="item-contact">
+      <a class="call" href="tel:0900000000">Gọi</a>
+      <a class="zalo" href="https://zalo.me/0900000000">Zalo</a>
+      <a class="wa" href="https://wa.me/84900000000">WhatsApp</a>
+    </div>
+  </div>
 
+  <!-- MÓN 3 -->
+  <div class="item"><div class="item-img"><img src="comrang.jpg" loading="lazy"></div><div class="info"><h3>Cơm Rang</h3><p>Fried Rice</p><div class="price">45.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
-<!-- MÓN 2 -->
-<div class="item">
-<div class="item-img"><img src="bunbo.jpg" loading="lazy"></div>
-<div class="info">
-<h3>Bún Chả</h3>
-<p>Grilled Pork with Noodles</p>
-<div class="price">55.000đ</div>
-</div>
-<div class="item-contact">
-<a class="call" href="tel:0900000000">Gọi</a>
-<a class="zalo" href="https://zalo.me/0900000000">Zalo</a>
-<a class="wa" href="https://wa.me/84900000000">WhatsApp</a>
-</div>
-</div>
+  <!-- MÓN 4 -->
+  <div class="item"><div class="item-img"><img src="mixao.jpg" loading="lazy"></div><div class="info"><h3>Mì Xào</h3><p>Stir-fried Noodles</p><div class="price">45.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
+  <!-- MÓN 5 -->
+  <div class="item"><div class="item-img"><img src="goicuon.jpg" loading="lazy"></div><div class="info"><h3>Gỏi Cuốn</h3><p>Fresh Spring Rolls</p><div class="price">30.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
-<!-- MÓN 3 -->
-<div class="item"><div class="item-img"><img src="comrang.jpg" loading="lazy"></div><div class="info"><h3>Cơm Rang</h3><p>Fried Rice</p><div class="price">45.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+  <!-- MÓN 6 -->
+  <div class="item"><div class="item-img"><img src="chagio.jpg" loading="lazy"></div><div class="info"><h3>Chả Giò</h3><p>Fried Spring Rolls</p><div class="price">35.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
+  <!-- MÓN 7 -->
+  <div class="item"><div class="item-img"><img src="garan.jpg" loading="lazy"></div><div class="info"><h3>Gà Rán</h3><p>Fried Chicken</p><div class="price">60.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
-<!-- MÓN 4 -->
-<div class="item"><div class="item-img"><img src="mixao.jpg" loading="lazy"></div><div class="info"><h3>Mì Xào</h3><p>Stir-fried Noodles</p><div class="price">45.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+  <!-- MÓN 8 -->
+  <div class="item"><div class="item-img"><img src="cakho.jpg" loading="lazy"></div><div class="info"><h3>Cá Kho</h3><p>Braised Fish</p><div class="price">70.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
+  <!-- MÓN 9 -->
+  <div class="item"><div class="item-img"><img src="canhchua.jpg" loading="lazy"></div><div class="info"><h3>Canh Chua</h3><p>Sour Soup</p><div class="price">40.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
-<!-- MÓN 5 -->
-<div class="item"><div class="item-img"><img src="goicuon.jpg" loading="lazy"></div><div class="info"><h3>Gỏi Cuốn</h3><p>Fresh Spring Rolls</p><div class="price">30.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
-
-
-<!-- MÓN 6 -->
-<div class="item"><div class="item-img"><img src="chagio.jpg" loading="lazy"></div><div class="info"><h3>Chả Giò</h3><p>Fried Spring Rolls</p><div class="price">35.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
-
-
-<!-- MÓN 7 -->
-<div class="item"><div class="item-img"><img src="garan.jpg" loading="lazy"></div><div class="info"><h3>Gà Rán</h3><p>Fried Chicken</p><div class="price">60.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
-
-
-<!-- MÓN 8 -->
-<div class="item"><div class="item-img"><img src="canuong.jpg" loading="lazy"></div><div class="info"><h3>Cá nướng</h3><p>Braised Fish</p><div class="price">70.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
-
-
-<!-- MÓN 9 -->
-<div class="item"><div class="item-img"><img src="canhchua.jpg" loading="lazy"></div><div class="info"><h3>Canh Chua</h3><p>Sour Soup</p><div class="price">40.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
-
-
-<!-- MÓN 10 -->
-<div class="item"><div class="item-img"><img src="trachanh.jpg" loading="lazy"></div><div class="info"><h3>Trà Chanh</h3><p>Lemon Tea</p><div class="price">20.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
-
+  <!-- MÓN 10 -->
+  <div class="item"><div class="item-img"><img src="trachanh.jpg" loading="lazy"></div><div class="info"><h3>Trà Chanh</h3><p>Lemon Tea</p><div class="price">20.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
 
 </div>
-
 
 </body>
 </html>
-
-
