@@ -1,314 +1,86 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MN42802090');
-</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu</title>
-
-<style>
-* {
-  box-sizing: border-box;
 }
-
-* {
-  box-sizing: border-box;
-}
-@media (min-width: 768px) {
-  .menu {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
-    margin: auto;
-  }
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  background: #000;
-}
-
-.header h1 {
-  font-size: 20px;
-  margin: 0;
-}
-
-/* LANGUAGE */
-.lang button {
-  margin-left: 6px;
-  padding: 6px 10px;
-  border: none;
-  border-radius: 6px;
-  background: #333;
-  color: #fff;
-  font-size: 14px;
-}
-
-.lang button.active {
-  background: #ffd166;
-  color: #000;
-}
-
-/* MENU GRID */
-.menu {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  padding: 16px;
-  width: 100%;
-  max-width: 100%;
-}
-
-/* ITEM */
-.item {
-  background: #1e1e1e;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.item-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.info {
-  padding: 12px;
-}
-
-.price {
-  color: #ffd166;
-  font-weight: bold;
-  margin: 8px 0;
-}
-
-/* CONTACT UNDER ITEM */
-.item-contact {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  border-top: 1px solid #333;
-  background: #000;
-}
-
-.item-contact a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 12px;
-  text-align: center;
-}
-
-.item-contact span {
-  display: block;
-  font-size: 18px;
-}
-
-/* DESKTOP */
-@media (min-width: 768px) {
-  .menu {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-/* BEST SELLER BADGE */
-.item-img {
-  position: relative;
-}
-
-.badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ffd166;
-  color: #000;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 6px;
 }
 </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <h1 class="vi">MENU QUÁN</h1>
-  <h1 class="en" style="display:none">RESTAURANT LẠC MENU</h1>
 
-  <div class="lang">
-    <button id="btn-vi" class="active" onclick="setLang('vi')">VI</button>
-    <button id="btn-en" onclick="setLang('en')">EN</button>
-  </div>
-</div>
+<h1>MENU / FOOD MENU</h1>
 
-<!-- MENU -->
+
 <div class="menu">
 
-  <!-- ITEM 1 -->
-  <div class="item">
-    <div class="item-img">
-  <span class="badge">⭐ Best Seller</span>
-  <img src="pho.jpg">
+
+<!-- MÓN 1 -->
+<div class="item">
+<div class="item-img">
+<span class="badge">Best Seller</span>
+<img src="pho-bo.jpg" loading="lazy" decoding="async">
+</div>
+<div class="info">
+<h3>Phở Bò</h3>
+<p>Beef Noodle Soup</p>
+<div class="price">50.000đ</div>
+</div>
+<div class="item-contact">
+<a class="call" href="tel:0900000000">Gọi</a>
+<a class="zalo" href="https://zalo.me/0900000000">Zalo</a>
+<a class="wa" href="https://wa.me/84900000000">WhatsApp</a>
+</div>
 </div>
 
-    <div class="info">
-      <div class="vi">
-        <h3>Phở Bò</h3>
-        <p>Nước dùng hầm xương 12 giờ</p>
-      </div>
-      <div class="en" style="display:none">
-        <h3>Beef Noodle Soup</h3>
-        <p>12-hour simmered beef broth</p>
-      </div>
-      <div class="price">50.000đ</div>
-    </div>
 
-    <div class="item-contact">
-      <a href="tel:0364987155">
-        <span>📞</span>
-        <div class="vi">Gọi</div>
-        <div class="en" style="display:none">Call</div>
-      </a>
-      <a href="https://zalo.me/0364987155" target="_blank">
-        <span>💬</span>
-        <div>Zalo</div>
-      </a>
-      <a href="https://wa.me/84364987155" target="_blank">
-        <span>🟢</span>
-        <div>WhatsApp</div>
-      </a>
-    </div>
-  </div>
-
-  <!-- ITEM 2 -->
-  <div class="item">
-    <img src="bunbo.jpg">
-    <div class="info">
-      <div class="vi">
-        <h3>Bún Bò Huế</h3>
-        <p>Cay nhẹ, đậm vị Huế</p>
-      </div>
-      <div class="en" style="display:none">
-        <h3>Hue Spicy Beef Noodles</h3>
-        <p>Traditional spicy noodle soup</p>
-      </div>
-      <div class="price">55.000đ</div>
-    </div>
-
-    <div class="item-contact">
-      <a href="tel:0364987155">
-        <span>📞</span>
-        <div class="vi">Gọi</div>
-        <div class="en" style="display:none">Call</div>
-      </a>
-      <a href="https://zalo.me/0364987155" target="_blank">
-        <span>💬</span>
-        <div>Zalo</div>
-      </a>
-      <a href="https://wa.me/84364987155" target="_blank">
-        <span>🟢</span>
-        <div>WhatsApp</div>
-      </a>
-    </div>
-  </div>
-  <!-- ITEM 3 -->
-  <div class="item">
-    <img src="banhmi.jpg">
-    <div class="info">
-      <div class="vi">
-        <h3>Bánh mì thịt bò</h3>
-        <p>Cay nhẹ, đậm vị Huế</p>
-      </div>
-      <div class="en" style="display:none">
-        <h3>Hue Spicy Beef bánh mì</h3>
-        <p>Traditional spicy </p>
-      </div>
-      <div class="price">55.000đ</div>
-    </div>
-
-    <div class="item-contact">
-      <a href="tel:0364987155">
-        <span>📞</span>
-        <div class="vi">Gọi</div>
-        <div class="en" style="display:none">Call</div>
-      </a>
-      <a href="https://zalo.me/0364987155" target="_blank">
-        <span>💬</span>
-        <div>Zalo</div>
-      </a>
-      <a href="https://wa.me/84364987155" target="_blank">
-        <span>🟢</span>
-        <div>WhatsApp</div>
-      </a>
-    </div>
- </div>
-      <!-- ITEM 4 -->
-  <div class="item">
-    <img src="nem.jpg">
-    <div class="info">
-      <div class="vi">
-        <h3>Nem thịt chó</h3>
-        <p>Cay nhẹ, đậm vị Huế</p>
-      </div>
-      <div class="en" style="display:none">
-        <h3>Hue Spicy dog springrooll</h3>
-        <p>Traditional spicy </p>
-      </div>
-      <div class="price">55.000đ</div>
-    </div>
-
-    <div class="item-contact">
-      <a href="tel:0364987155">
-        <span>📞</span>
-        <div class="vi">Gọi</div>
-        <div class="en" style="display:none">Call</div>
-      </a>
-      <a href="https://zalo.me/0364987155" target="_blank">
-        <span>💬</span>
-        <div>Zalo</div>
-      </a>
-      <a href="https://wa.me/84364987155" target="_blank">
-        <span>🟢</span>
-        <div>WhatsApp</div>
-      </a>
-    </div>
+<!-- MÓN 2 -->
+<div class="item">
+<div class="item-img"><img src="bun-cha.jpg" loading="lazy"></div>
+<div class="info">
+<h3>Bún Chả</h3>
+<p>Grilled Pork with Noodles</p>
+<div class="price">55.000đ</div>
+</div>
+<div class="item-contact">
+<a class="call" href="tel:0900000000">Gọi</a>
+<a class="zalo" href="https://zalo.me/0900000000">Zalo</a>
+<a class="wa" href="https://wa.me/84900000000">WhatsApp</a>
+</div>
 </div>
 
-<!-- SCRIPT -->
-<script>
-function setLang(lang) {
-  document.querySelectorAll('.vi').forEach(el => el.style.display = lang === 'vi' ? '' : 'none');
-  document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
 
-  document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-}
-</script>
+<!-- MÓN 3 -->
+<div class="item"><div class="item-img"><img src="com-rang.jpg" loading="lazy"></div><div class="info"><h3>Cơm Rang</h3><p>Fried Rice</p><div class="price">45.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+<!-- MÓN 4 -->
+<div class="item"><div class="item-img"><img src="mi-xao.jpg" loading="lazy"></div><div class="info"><h3>Mì Xào</h3><p>Stir-fried Noodles</p><div class="price">45.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+<!-- MÓN 5 -->
+<div class="item"><div class="item-img"><img src="goi-cuon.jpg" loading="lazy"></div><div class="info"><h3>Gỏi Cuốn</h3><p>Fresh Spring Rolls</p><div class="price">30.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+<!-- MÓN 6 -->
+<div class="item"><div class="item-img"><img src="cha-gio.jpg" loading="lazy"></div><div class="info"><h3>Chả Giò</h3><p>Fried Spring Rolls</p><div class="price">35.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+<!-- MÓN 7 -->
+<div class="item"><div class="item-img"><img src="ga-ran.jpg" loading="lazy"></div><div class="info"><h3>Gà Rán</h3><p>Fried Chicken</p><div class="price">60.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+<!-- MÓN 8 -->
+<div class="item"><div class="item-img"><img src="ca-kho.jpg" loading="lazy"></div><div class="info"><h3>Cá Kho</h3><p>Braised Fish</p><div class="price">70.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+<!-- MÓN 9 -->
+<div class="item"><div class="item-img"><img src="canh-chua.jpg" loading="lazy"></div><div class="info"><h3>Canh Chua</h3><p>Sour Soup</p><div class="price">40.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+<!-- MÓN 10 -->
+<div class="item"><div class="item-img"><img src="tra-chanh.jpg" loading="lazy"></div><div class="info"><h3>Trà Chanh</h3><p>Lemon Tea</p><div class="price">20.000đ</div></div><div class="item-contact"><a class="call" href="tel:0900000000">Gọi</a><a class="zalo" href="https://zalo.me/0900000000">Zalo</a><a class="wa" href="https://wa.me/84900000000">WhatsApp</a></div></div>
+
+
+</div>
+
 
 </body>
 </html>
-
-
-
-
-
